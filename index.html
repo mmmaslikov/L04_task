@@ -331,86 +331,88 @@ const TAGS = [
   { code:"!important", desc:"Глушит каскад. На курсе не используем.", used:false }
 ];
 
-const REFERENCE_CODE = `<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="utf-8">
-  <title>Северный пирог</title>
-  <style>
-    :root {
-      --pie-bg:          #f4f6f3;
-      --pie-card:        #ffffff;
-      --pie-text:        #111312;
-      --pie-muted:       #6b706b;
-      --pie-accent-dark: #5fa22e;
-      --pie-border:      #e3e7e1;
-    }
-
-    html[data-theme="dark"] {
-      --pie-bg:          #0f0f0f;
-      --pie-card:        #17191a;
-      --pie-text:        #f2f4f1;
-      --pie-muted:       #9ba29b;
-      --pie-accent-dark: #7cc142;
-      --pie-border:      #262a26;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--pie-bg);
-      color: var(--pie-text);
-      line-height: 1.5;
-      padding: 24px;
-    }
-
-    h1 { color: var(--pie-accent-dark); }
-
-    .muted { color: var(--pie-muted); }
-
-    ul { list-style: none; padding-left: 0; }
-
-    .card {
-      background: var(--pie-card);
-      border: 1px solid var(--pie-border);
-      border-radius: 14px;
-      padding: 16px;
-      margin-bottom: 12px;
-    }
-
-    .price {
-      font-weight: 700;
-      color: var(--pie-accent-dark);
-    }
-
-    .theme-toggle {
-      position: fixed;
-      top: 16px;
-      right: 16px;
-      background: var(--pie-card);
-      color: var(--pie-text);
-      border: 1px solid var(--pie-border);
-      border-radius: 8px;
-      padding: 8px 14px;
-      font-size: 14px;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
-  <button type="button" class="theme-toggle" onclick="
-    const html = document.documentElement;
-    html.dataset.theme = html.dataset.theme === 'dark' ? '' : 'dark';
-  ">Сменить тему</button>
-
-  <h1>Северный пирог</h1>
-  <p class="muted">Школьный буфет. Домашняя выпечка каждый день.</p>
-  <ul>
-    <li class="card">Рыбник — <span class="price">90 ₽</span></li>
-    <li class="card">Брусничный пирог — <span class="price">70 ₽</span></li>
-    <li class="card">Калитка с картошкой — <span class="price">45 ₽</span></li>
-  </ul>
-</body>
-</html>`;
+const REFERENCE_CODE = [
+  '<!DOCTYPE html>',
+  '<html lang="ru">',
+  '<head>',
+  '  <meta charset="utf-8">',
+  '  <title>Северный пирог</title>',
+  '  <style>',
+  '    :root {',
+  '      --pie-bg:          #f4f6f3;',
+  '      --pie-card:        #ffffff;',
+  '      --pie-text:        #111312;',
+  '      --pie-muted:       #6b706b;',
+  '      --pie-accent-dark: #5fa22e;',
+  '      --pie-border:      #e3e7e1;',
+  '    }',
+  '',
+  '    html[data-theme="dark"] {',
+  '      --pie-bg:          #0f0f0f;',
+  '      --pie-card:        #17191a;',
+  '      --pie-text:        #f2f4f1;',
+  '      --pie-muted:       #9ba29b;',
+  '      --pie-accent-dark: #7cc142;',
+  '      --pie-border:      #262a26;',
+  '    }',
+  '',
+  '    body {',
+  '      font-family: Arial, Helvetica, sans-serif;',
+  '      background: var(--pie-bg);',
+  '      color: var(--pie-text);',
+  '      line-height: 1.5;',
+  '      padding: 24px;',
+  '    }',
+  '',
+  '    h1 { color: var(--pie-accent-dark); }',
+  '',
+  '    .muted { color: var(--pie-muted); }',
+  '',
+  '    ul { list-style: none; padding-left: 0; }',
+  '',
+  '    .card {',
+  '      background: var(--pie-card);',
+  '      border: 1px solid var(--pie-border);',
+  '      border-radius: 14px;',
+  '      padding: 16px;',
+  '      margin-bottom: 12px;',
+  '    }',
+  '',
+  '    .price {',
+  '      font-weight: 700;',
+  '      color: var(--pie-accent-dark);',
+  '    }',
+  '',
+  '    .theme-toggle {',
+  '      position: fixed;',
+  '      top: 16px;',
+  '      right: 16px;',
+  '      background: var(--pie-card);',
+  '      color: var(--pie-text);',
+  '      border: 1px solid var(--pie-border);',
+  '      border-radius: 8px;',
+  '      padding: 8px 14px;',
+  '      font-size: 14px;',
+  '      cursor: pointer;',
+  '    }',
+  '  </style>',
+  '</head>',
+  '<body>',
+  '  <button type="button" class="theme-toggle" onclick="',
+  '    const html = document.documentElement;',
+  '    html.dataset.theme = html.dataset.theme === \'dark\' ? \'\' : \'dark\';',
+  '  ">Сменить тему</button>',
+  '',
+  '  <h1>Северный пирог</h1>',
+  '  <p class="muted">Школьный буфет. Домашняя выпечка каждый день.</p>',
+  '  <ul>',
+  '    <li class="card">Рыбник — <span class="price">90 ₽</span></li>',
+  '    <li class="card">Брусничный пирог — <span class="price">70 ₽</span></li>',
+  '    <li class="card">Калитка с картошкой — <span class="price">45 ₽</span></li>',
+  '  </ul>',
+  '</body>',
+  '</html>'
+].join('\n');
 
 const TASKS = [
   {
@@ -439,21 +441,23 @@ const TASKS = [
   }
 ];
 
-const PROMPT_TEMPLATE = `Ты подбираешь цветовую палитру для учебного веб-проекта.
-
-Контекст: {CONTEXT}. Стек: только HTML и CSS, без библиотек. Палитра будет задана CSS-переменными в :root.
-
-Задача: предложи палитру из шести цветов — фон страницы, фон карточки, основной текст, приглушённый текст, акцент, граница. Плюс второй набор тех же шести для тёмной темы.
-
-Ограничения: цвета в шестнадцатеричном формате; имена переменных с префиксом по теме проекта (например, --viz-, --shop-, --book-) и по роли, а не по цвету; контраст основного текста к фону не ниже 4.5:1; акцентный цвет один и тот же в обеих темах или почти тот же; никаких градиентов и никаких библиотек.
-
-Формат ответа: готовый блок CSS с двумя селекторами — :root и html[data-theme="dark"]. Ниже — таблица: переменная, светлое значение, тёмное значение, где применяется.
-
-Критерии проверки: имена переменных совпадают в обоих наборах; ни одна переменная не потеряна во втором наборе; указан контраст текста к фону для каждой темы.
-
-Вот моя разметка:
-
-{CODE}`;
+const PROMPT_TEMPLATE = [
+  'Ты подбираешь цветовую палитру для учебного веб-проекта.',
+  '',
+  'Контекст: {CONTEXT}. Стек: только HTML и CSS, без библиотек. Палитра будет задана CSS-переменными в :root.',
+  '',
+  'Задача: предложи палитру из шести цветов — фон страницы, фон карточки, основной текст, приглушённый текст, акцент, граница. Плюс второй набор тех же шести для тёмной темы.',
+  '',
+  'Ограничения: цвета в шестнадцатеричном формате; имена переменных с префиксом по теме проекта (например, --viz-, --shop-, --book-) и по роли, а не по цвету; контраст основного текста к фону не ниже 4.5:1; акцентный цвет один и тот же в обеих темах или почти тот же; никаких градиентов и никаких библиотек.',
+  '',
+  'Формат ответа: готовый блок CSS с двумя селекторами — :root и html[data-theme="dark"]. Ниже — таблица: переменная, светлое значение, тёмное значение, где применяется.',
+  '',
+  'Критерии проверки: имена переменных совпадают в обоих наборах; ни одна переменная не потеряна во втором наборе; указан контраст текста к фону для каждой темы.',
+  '',
+  'Вот моя разметка:',
+  '',
+  '{CODE}'
+].join('\n');
 
 const CHECKLIST = [
   "Имена переменных совпадают в светлом и тёмном наборах",
@@ -552,7 +556,7 @@ function render(){
   const progress = countProgress();
 
   let html = renderTopbar(progress);
-  html += `<main>`;
+  html += '<main>';
 
   if(!state.started){
     html += renderHero();
@@ -563,7 +567,7 @@ function render(){
     html += renderPractice();
   }
 
-  html += `</main>`;
+  html += '</main>';
 
   if(state.started && !state.finished){
     html += renderActions(progress);
@@ -574,133 +578,133 @@ function render(){
 }
 
 function renderTopbar(progress){
-  return `
-    <div class="topbar" role="banner">
-      <div class="topbar-inner">
-        <div class="brand">
-          <div class="brand-title">${escapeHtml(COURSE.title)}</div>
-          <div class="brand-sub">${escapeHtml(COURSE.teacher)} · ${escapeHtml(COURSE.grade)}</div>
-        </div>
-        <div class="progress-wrap" aria-label="Прогресс заполнения">
-          <div class="progress-bar" role="progressbar"
-               aria-valuenow="${progress.percent}" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-fill" style="width:${progress.percent}%"></div>
-          </div>
-          <div class="progress-num">${progress.percent}%</div>
-        </div>
-      </div>
-    </div>
-  `;
+  return [
+    '<div class="topbar" role="banner">',
+    '  <div class="topbar-inner">',
+    '    <div class="brand">',
+    '      <div class="brand-title">' + escapeHtml(COURSE.title) + '</div>',
+    '      <div class="brand-sub">' + escapeHtml(COURSE.teacher) + ' · ' + escapeHtml(COURSE.grade) + '</div>',
+    '    </div>',
+    '    <div class="progress-wrap" aria-label="Прогресс заполнения">',
+    '      <div class="progress-bar" role="progressbar"',
+    '           aria-valuenow="' + progress.percent + '" aria-valuemin="0" aria-valuemax="100">',
+    '        <div class="progress-fill" style="width:' + progress.percent + '%"></div>',
+    '      </div>',
+    '      <div class="progress-num">' + progress.percent + '%</div>',
+    '    </div>',
+    '  </div>',
+    '</div>'
+  ].join('\n');
 }
 
 function renderHero(){
-  return `
-    <section class="hero" aria-labelledby="hero-title">
-      <span class="hero-badge">● Занятие 4 из 24</span>
-      <h1 id="hero-title">${escapeHtml(COURSE.subtitle)}</h1>
-      <p>Разметка готова — вида нет. Марина Петровна посмотрела и сказала: «Похоже на объявление, которое повесили на дверь». Сегодня добавляем CSS: палитру, карточки и тёмную тему.</p>
-      <div class="hero-meta">
-        <span class="chip">👤 <b>${escapeHtml(COURSE.teacher)}</b></span>
-        <span class="chip">🎓 ${escapeHtml(COURSE.grade)}</span>
-        <span class="chip"> ${escapeHtml(COURSE.time)}</span>
-      </div>
-      <button class="btn btn-primary btn-lg" data-action="start">
-        Начать работу
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-      </button>
-    </section>
-  `;
+  return [
+    '<section class="hero" aria-labelledby="hero-title">',
+    '  <span class="hero-badge">● Занятие 4 из 24</span>',
+    '  <h1 id="hero-title">' + escapeHtml(COURSE.subtitle) + '</h1>',
+    '  <p>Разметка готова — вида нет. Марина Петровна посмотрела и сказала: «Похоже на объявление, которое повесили на дверь». Сегодня добавляем CSS: палитру, карточки и тёмную тему.</p>',
+    '  <div class="hero-meta">',
+    '    <span class="chip">👤 <b>' + escapeHtml(COURSE.teacher) + '</b></span>',
+    '    <span class="chip">🎓 ' + escapeHtml(COURSE.grade) + '</span>',
+    '    <span class="chip">⏱ ' + escapeHtml(COURSE.time) + '</span>',
+    '  </div>',
+    '  <button class="btn btn-primary btn-lg" data-action="start">',
+    '    Начать работу',
+    '    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>',
+    '  </button>',
+    '</section>'
+  ].join('\n');
 }
 
 function renderTheory(){
   const learned = termsCount();
   const theoryDone = learned === TERMS.length;
-  return `
-    <section class="section" aria-labelledby="theory-title">
-      <div class="section-head">
-        <div class="section-num theory">Т</div>
-        <div class="section-title-wrap">
-          <h2 class="section-title" id="theory-title">Теория: термины и свойства</h2>
-          <p class="section-sub">Прочитай каждый термин и отметь те, что понял. Ниже — таблица свойств CSS и эталон оформления.</p>
-        </div>
-        <span class="section-status ${theoryDone ? "done" : ""}">${learned}/${TERMS.length} отмечено</span>
-      </div>
-
-      <div class="instruction">
-        <ol>
-          <li>Внимательно прочитай каждый термин.</li>
-          <li>Если понял — отметь галочкой. Это подтверждение, что ты готов идти дальше.</li>
-          <li>Все двадцать два термина должны быть отмечены, прежде чем ты перейдёшь к практике.</li>
-        </ol>
-      </div>
-
-      <h3 class="sub-title">Ключевые термины</h3>
-      <div class="terms-grid" role="list">
-        ${TERMS.map(renderTerm).join("")}
-      </div>
-
-      <div class="divider"></div>
-
-      <h3 class="sub-title">Свойства и селекторы CSS</h3>
-      <p class="section-sub" style="margin-bottom:12px">Жёлтая плашка «на занятии» означает, что это свойство мы используем сегодня.</p>
-      <div style="overflow-x:auto; margin-bottom:20px">
-        <table class="tags-table">
-          <thead>
-            <tr>
-              <th>Свойство / селектор</th>
-              <th>Что делает</th>
-            </tr>
-          </thead>
-          <tbody>
-            ${TAGS.map(renderTagRow).join("")}
-          </tbody>
-        </table>
-      </div>
-
-      <div class="divider"></div>
-
-      <h3 class="sub-title">Эталон: оформление буфета «Северный пирог»</h3>
-      <p class="section-sub" style="margin-bottom:12px">Вот как должен выглядеть готовый файл после занятия. Весь CSS — внутри <code>&lt;style&gt;</code> в <code>&lt;head&gt;</code>, отдельного файла пока нет. Открой эталон только после того, как напишешь свой код.</p>
-
-      <div class="ethalon-toggle">
-        <p class="ethalon-toggle-text">
-          <b>Я написал CSS для своих страниц и хочу сравнить с эталоном.</b><br>
-          Нажми кнопку ниже — эталон откроется, и ты сможешь проверить свою работу.
-        </p>
-        <button class="btn btn-secondary" data-action="toggle-ethalon" type="button">
-          ${state.ethalonOpen ? "Скрыть эталон" : "Открыть эталон"}
-        </button>
-      </div>
-
-      <div class="ethalon-content ${state.ethalonOpen ? "open" : ""}" id="ethalon-content">
-        <div class="code-block">${escapeHtml(REFERENCE_CODE)}</div>
-      </div>
-    </section>
-  `;
+  return [
+    '<section class="section" aria-labelledby="theory-title">',
+    '  <div class="section-head">',
+    '    <div class="section-num theory">Т</div>',
+    '    <div class="section-title-wrap">',
+    '      <h2 class="section-title" id="theory-title">Теория: термины и свойства</h2>',
+    '      <p class="section-sub">Прочитай каждый термин и отметь те, что понял. Ниже — таблица свойств CSS и эталон оформления.</p>',
+    '    </div>',
+    '    <span class="section-status ' + (theoryDone ? 'done' : '') + '">' + learned + '/' + TERMS.length + ' отмечено</span>',
+    '  </div>',
+    '',
+    '  <div class="instruction">',
+    '    <ol>',
+    '      <li>Внимательно прочитай каждый термин.</li>',
+    '      <li>Если понял — отметь галочкой. Это подтверждение, что ты готов идти дальше.</li>',
+    '      <li>Все двадцать два термина должны быть отмечены, прежде чем ты перейдёшь к практике.</li>',
+    '    </ol>',
+    '  </div>',
+    '',
+    '  <h3 class="sub-title">Ключевые термины</h3>',
+    '  <div class="terms-grid" role="list">',
+    '    ' + TERMS.map(renderTerm).join(''),
+    '  </div>',
+    '',
+    '  <div class="divider"></div>',
+    '',
+    '  <h3 class="sub-title">Свойства и селекторы CSS</h3>',
+    '  <p class="section-sub" style="margin-bottom:12px">Жёлтая плашка «на занятии» означает, что это свойство мы используем сегодня.</p>',
+    '  <div style="overflow-x:auto; margin-bottom:20px">',
+    '    <table class="tags-table">',
+    '      <thead>',
+    '        <tr>',
+    '          <th>Свойство / селектор</th>',
+    '          <th>Что делает</th>',
+    '        </tr>',
+    '      </thead>',
+    '      <tbody>',
+    '        ' + TAGS.map(renderTagRow).join(''),
+    '      </tbody>',
+    '    </table>',
+    '  </div>',
+    '',
+    '  <div class="divider"></div>',
+    '',
+    '  <h3 class="sub-title">Эталон: оформление буфета «Северный пирог»</h3>',
+    '  <p class="section-sub" style="margin-bottom:12px">Вот как должен выглядеть готовый файл после занятия. Весь CSS — внутри &lt;style&gt; в &lt;head&gt;, отдельного файла пока нет. Открой эталон только после того, как напишешь свой код.</p>',
+    '',
+    '  <div class="ethalon-toggle">',
+    '    <p class="ethalon-toggle-text">',
+    '      <b>Я написал CSS для своих страниц и хочу сравнить с эталоном.</b><br>',
+    '      Нажми кнопку ниже — эталон откроется, и ты сможешь проверить свою работу.',
+    '    </p>',
+    '    <button class="btn btn-secondary" data-action="toggle-ethalon" type="button">',
+    '      ' + (state.ethalonOpen ? 'Скрыть эталон' : 'Открыть эталон'),
+    '    </button>',
+    '  </div>',
+    '',
+    '  <div class="ethalon-content ' + (state.ethalonOpen ? 'open' : '') + '" id="ethalon-content">',
+    '    <div class="code-block">' + escapeHtml(REFERENCE_CODE) + '</div>',
+    '  </div>',
+    '</section>'
+  ].join('\n');
 }
 
 function renderTerm(t){
   const learned = !!state.termsLearned[t.key];
-  return `
-    <div class="term ${learned ? "learned" : ""}" data-term="${t.key}" role="listitem" tabindex="0" aria-pressed="${learned}">
-      <div class="term-head">
-        <span class="term-name">${escapeHtml(t.name)}</span>
-        <span class="term-check">
-          <svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"/></svg>
-        </span>
-      </div>
-      <div class="term-def">${escapeHtml(t.def)}</div>
-    </div>
-  `;
+  return [
+    '<div class="term ' + (learned ? 'learned' : '') + '" data-term="' + t.key + '" role="listitem" tabindex="0" aria-pressed="' + learned + '">',
+    '  <div class="term-head">',
+    '    <span class="term-name">' + escapeHtml(t.name) + '</span>',
+    '    <span class="term-check">',
+    '      <svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"/></svg>',
+    '    </span>',
+    '  </div>',
+    '  <div class="term-def">' + escapeHtml(t.def) + '</div>',
+    '</div>'
+  ].join('\n');
 }
 
 function renderTagRow(tag){
-  return `
-    <tr>
-      <td><span class="tag-code">${escapeHtml(tag.code)}</span>${tag.used ? '<span class="tag-used">НА ЗАНЯТИИ</span>' : ''}</td>
-      <td>${escapeHtml(tag.desc)}</td>
-    </tr>
-  `;
+  return [
+    '<tr>',
+    '  <td><span class="tag-code">' + escapeHtml(tag.code) + '</span>' + (tag.used ? '<span class="tag-used">НА ЗАНЯТИИ</span>' : '') + '</td>',
+    '  <td>' + escapeHtml(tag.desc) + '</td>',
+    '</tr>'
+  ].join('\n');
 }
 
 function renderPractice(){
@@ -709,240 +713,274 @@ function renderPractice(){
   const promptDone = state.prompt.response.trim() && allChecked && state.prompt.weak.trim();
   const practiceDone = tasksDone === 3 && promptDone;
 
-  return `
-    <section class="section" aria-labelledby="practice-title">
-      <div class="section-head">
-        <div class="section-num practice">П</div>
-        <div class="section-title-wrap">
-          <h2 class="section-title" id="practice-title">Практика: оформление и проверка</h2>
-          <p class="section-sub">Добавь CSS к своим страницам с прошлого урока, потом провери палитру через ИИ.</p>
-        </div>
-        <span class="section-status ${practiceDone ? "done" : ""}">${tasksDone}/3 ТЗ + ИИ</span>
-      </div>
+  const taskRadios = TASKS.map(function(t){
+    const sel = state.prompt.selectedTask === t.id ? 'selected' : '';
+    const chk = state.prompt.selectedTask === t.id ? 'checked' : '';
+    return '<label class="radio ' + sel + '" style="flex:0 1 auto">' +
+      '<input type="radio" name="selectedTask" value="' + t.id + '" ' + chk + ' data-prompt-task/>' +
+      escapeHtml(t.title) +
+    '</label>';
+  }).join('');
 
-      <div class="algo">
-        <div class="algo-title">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-          Как работать через блокнот
-        </div>
-        <ol>
-          <li>Открой <b>Блокнот</b> (в меню «Пуск» набери «Блокнот»).</li>
-          <li>Напиши или вставь код — HTML и CSS живут в одном файле, CSS идёт внутри <code>&lt;style&gt;</code> в <code>&lt;head&gt;</code>.</li>
-          <li>Нажми <b>Файл → Сохранить как</b>. В поле «Тип файла» выбери <b>«Все файлы»</b>. В поле «Имя файла» напиши <b>index.html</b>. В поле «Кодировка» выбери <b>UTF-8</b>.</li>
-          <li>Сохрани файл в свою личную папку.</li>
-          <li>Открой файл двойным кликом — он откроется в браузере.</li>
-          <li>Поправил код? Сохрани в блокноте → нажми <b>F5</b> в браузере.</li>
-          <li>Если вместо букв непонятные символы — значит, сохранил не в UTF-8. Пересохрани.</li>
-        </ol>
-        <div class="algo-note">
-          <b>Важно:</b> на этом занятии отдельного CSS-файла нет. Весь CSS живёт внутри <code>&lt;style&gt;</code> в том же <code>index.html</code>. Отдельные файлы и VS Code подключим позже.
-        </div>
-        <div class="algo-note">
-          <b>Альтернатива:</b> если блокнот не получается или хочешь видеть результат сразу — найди в интернете <b>«Онлайн HTML-редактор»</b>. Там ты пишешь код слева, а справа видишь, как он выглядит на странице. Так быстрее проверять свои правки.
-        </div>
-      </div>
+  const customSel = state.prompt.selectedTask === 'custom' ? 'selected' : '';
+  const customChk = state.prompt.selectedTask === 'custom' ? 'checked' : '';
 
-      <div class="algo">
-        <div class="algo-title">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 2"/></svg>
-          Кнопка переключения темы
-        </div>
-        <p style="margin:0 0 10px; color:#78350f; font-size:14px; line-height:1.5">
-          Чтобы тёмная тема включалась по клику, нужна кнопка. Она меняет атрибут <code>data-theme</code> у тега <code>&lt;html&gt;</code> — и CSS сам подхватывает второй набор переменных.
-        </p>
-        
-        <p style="margin:12px 0 8px; color:#78350f; font-size:14px; font-weight:600">
-           Куда вставлять кнопку
-        </p>
-        <p style="margin:0 0 10px; color:#78350f; font-size:14px; line-height:1.5">
-          Кнопку вставляй <b>внутри</b> <code>&lt;body&gt;</code>, сразу после открывающего тега <code>&lt;body&gt;</code> — чтобы она была первой на странице. Или перед закрывающим <code>&lt;/body&gt;</code> — разницы нет, главное внутри body.
-        </p>
+  let selectedInfo = '';
+  if(state.prompt.selectedTask === 'custom'){
+    selectedInfo = [
+      '<div class="field">',
+      '  <label class="field-label" for="prompt-custom">Твой код</label>',
+      '  <textarea class="field-input code ' + (state.prompt.customCode.trim() ? 'filled' : '') + '"',
+      '    id="prompt-custom" data-prompt-key="customCode"',
+      '    placeholder="Вставь сюда свой HTML с блоком &lt;style&gt;">' + escapeHtml(state.prompt.customCode) + '</textarea>',
+      '</div>'
+    ].join('\n');
+  } else {
+    const selTask = TASKS.find(function(t){ return t.id === state.prompt.selectedTask; });
+    const codeLen = state.tasks[state.prompt.selectedTask].code.length;
+    const codeFilled = state.tasks[state.prompt.selectedTask].code.trim();
+    selectedInfo = [
+      '<div class="instruction" style="margin-bottom:14px">',
+      '  <b>Будет отправлен код из ТЗ «' + escapeHtml(selTask.title) + '».</b>',
+      codeFilled
+        ? 'Заполнено символов: ' + codeLen + '.'
+        : '<span style="color:#b45309">Код этого ТЗ ещё не заполнен — промпт уйдёт пустым. Сначала напиши код в задании выше.</span>',
+      '</div>'
+    ].join('\n');
+  }
 
-        <div class="code-block" style="margin-bottom:12px">${escapeHtml(`  <body>
-    <!-- КНОПКА ПЕРЕКЛЮЧЕНИЯ ТЕМЫ -->
-    <button type="button" class="theme-toggle" onclick="
-      const html = document.documentElement;
-      html.dataset.theme = html.dataset.theme === 'dark' ? '' : 'dark';
-    ">Сменить тему</button>
+  const checkItems = CHECKLIST.map(function(text, i){
+    const checked = state.prompt.checklist[i] ? 'checked' : '';
+    return [
+      '<div class="check-item ' + checked + '"',
+      '     data-check-idx="' + i + '" role="checkbox" aria-checked="' + state.prompt.checklist[i] + '" tabindex="0">',
+      '  <span class="check-box">',
+      '    <svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"/></svg>',
+      '  </span>',
+      '  <span class="check-text">' + escapeHtml(text) + '</span>',
+      '</div>'
+    ].join('\n');
+  }).join('');
 
-    <!-- остальной контент страницы -->
-  </body>`)}</div>
+  const toggleCodeBlock = [
+    '  <body>',
+    '    <!-- КНОПКА ПЕРЕКЛЮЧЕНИЯ ТЕМЫ -->',
+    '    <button type="button" class="theme-toggle" onclick="',
+    '      const html = document.documentElement;',
+    '      html.dataset.theme = html.dataset.theme === \'dark\' ? \'\' : \'dark\';',
+    '    ">Сменить тему</button>',
+    '',
+    '    <!-- остальной контент страницы -->',
+    '  </body>'
+  ].join('\n');
 
-        <p style="margin:12px 0 8px; color:#78350f; font-size:14px; font-weight:600">
-          🎨 Как оформить кнопку через CSS
-        </p>
-        <p style="margin:0 0 10px; color:#78350f; font-size:14px; line-height:1.5">
-          Добавь в блок <code>&lt;style&gt;</code> правило для класса <code>.theme-toggle</code>. Кнопка должна быть видна в обеих темах — используй <code>var()</code> для фона, текста и рамки.
-        </p>
+  const cssToggleBlock = [
+    '    .theme-toggle {',
+    '      position: fixed;',
+    '      top: 16px;',
+    '      right: 16px;',
+    '      background: var(--pie-card);',
+    '      color: var(--pie-text);',
+    '      border: 1px solid var(--pie-border);',
+    '      border-radius: 8px;',
+    '      padding: 8px 14px;',
+    '      font-size: 14px;',
+    '      cursor: pointer;',
+    '    }'
+  ].join('\n');
 
-        <div class="code-block css-block" style="margin-bottom:0">${escapeHtml(`    .theme-toggle {
-      position: fixed;
-      top: 16px;
-      right: 16px;
-      background: var(--pie-card);
-      color: var(--pie-text);
-      border: 1px solid var(--pie-border);
-      border-radius: 8px;
-      padding: 8px 14px;
-      font-size: 14px;
-      cursor: pointer;
-    }`)}</div>
-
-        <div class="algo-note">
-          <b>Как это работает:</b> <code>document.documentElement</code> — это тег <code>&lt;html&gt;</code>. Если у него уже стоит <code>data-theme="dark"</code>, кнопка убирает атрибут. Если атрибута нет — ставит. CSS-селектор <code>html[data-theme="dark"]</code> срабатывает только когда атрибут есть.
-        </div>
-        <div class="algo-note">
-          <b>Зачем <code>position: fixed</code>:</b> кнопка «прилипает» к правому верхнему углу и остаётся там при прокрутке. Можно использовать и <code>position: absolute</code> — тогда кнопка будет в потоке документа.
-        </div>
-      </div>
-
-      <h3 class="sub-title">Три задания</h3>
-      <p class="section-sub" style="margin-bottom:12px">Каждое задание — продолжение твоей страницы с прошлого урока. Сначала вставь свой старый код, потом добавь блок <code>&lt;style&gt;</code> в <code>&lt;head&gt;</code>.</p>
-      <div class="tasks-list">
-        ${TASKS.map(renderTaskCard).join("")}
-      </div>
-
-      <div class="divider"></div>
-
-      <h3 class="sub-title">Проверка через ИИ</h3>
-      <p class="section-sub" style="margin-bottom:14px">Выбери, какой код отправить на проверку, или вставь свой. Скопируй промпт в одну из нейросетей и вставь ответ обратно. Префикс переменных модель подберёт по теме твоего проекта.</p>
-
-      <div class="ai-links">
-        <a class="ai-link" href="https://chat.deepseek.com/" target="_blank" rel="noopener">
-          <span class="ai-link-dot deepseek"></span>
-          DeepSeek
-        </a>
-        <a class="ai-link" href="https://alice.yandex.ru/" target="_blank" rel="noopener">
-          <span class="ai-link-dot alice"></span>
-          Яндекс Алиса
-        </a>
-        <a class="ai-link" href="https://chat.qwen.ai/" target="_blank" rel="noopener">
-          <span class="ai-link-dot qwen"></span>
-          Qwen
-        </a>
-      </div>
-
-      <div class="field">
-        <label class="field-label">Какой код отправить на проверку?</label>
-        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px">
-          ${TASKS.map(t => `
-            <label class="radio ${state.prompt.selectedTask === t.id ? "selected" : ""}" style="flex:0 1 auto">
-              <input type="radio" name="selectedTask" value="${t.id}" ${state.prompt.selectedTask === t.id ? "checked" : ""} data-prompt-task/>
-              ${escapeHtml(t.title)}
-            </label>
-          `).join("")}
-          <label class="radio ${state.prompt.selectedTask === "custom" ? "selected" : ""}" style="flex:0 1 auto">
-            <input type="radio" name="selectedTask" value="custom" ${state.prompt.selectedTask === "custom" ? "checked" : ""} data-prompt-task/>
-            Свой код
-          </label>
-        </div>
-      </div>
-
-      ${state.prompt.selectedTask === "custom" ? `
-        <div class="field">
-          <label class="field-label" for="prompt-custom">Твой код</label>
-          <textarea class="field-input code ${state.prompt.customCode.trim() ? "filled" : ""}"
-            id="prompt-custom" data-prompt-key="customCode"
-            placeholder="Вставь сюда свой HTML с блоком <style>">${escapeHtml(state.prompt.customCode)}</textarea>
-        </div>
-      ` : `
-        <div class="instruction" style="margin-bottom:14px">
-          <b>Будет отправлен код из ТЗ «${escapeHtml(TASKS.find(t => t.id === state.prompt.selectedTask).title)}».</b>
-          ${state.tasks[state.prompt.selectedTask].code.trim()
-            ? `Заполнено символов: ${state.tasks[state.prompt.selectedTask].code.length}.`
-            : `<span style="color:#b45309">Код этого ТЗ ещё не заполнен — промпт уйдёт пустым. Сначала напиши код в задании выше.</span>`}
-        </div>
-      `}
-
-      <div class="prompt-box" aria-label="Текст промпта">
-        <button class="copy-btn" data-action="copy-prompt" type="button" aria-label="Скопировать промпт с кодом">Копировать</button>
-${escapeHtml(buildPrompt())}
-      </div>
-
-      <div class="field">
-        <label class="field-label" for="prompt-response">Ответ нейросети (вставь сюда)</label>
-        <textarea class="field-input ${state.prompt.response.trim() ? "filled" : ""}"
-          id="prompt-response" data-prompt-key="response"
-          placeholder="Сюда — то, что прислала модель"
-          style="min-height:180px">${escapeHtml(state.prompt.response)}</textarea>
-      </div>
-
-      <div class="checklist" role="group" aria-label="Чек-лист проверки ответа">
-        <div class="checklist-title">Чек-лист проверки ответа</div>
-        ${CHECKLIST.map((text, i) => `
-          <div class="check-item ${state.prompt.checklist[i] ? "checked" : ""}"
-               data-check-idx="${i}" role="checkbox" aria-checked="${state.prompt.checklist[i]}" tabindex="0">
-            <span class="check-box">
-              <svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"/></svg>
-            </span>
-            <span class="check-text">${escapeHtml(text)}</span>
-          </div>
-        `).join("")}
-      </div>
-
-      <div class="field">
-        <label class="field-label" for="prompt-weak">Слабое место, которое ты нашёл в ответе модели</label>
-        <textarea class="field-input ${state.prompt.weak.trim() ? "filled" : ""}"
-          id="prompt-weak" data-prompt-key="weak"
-          placeholder="Где модель предложила цвет без контраста, потеряла переменную или использовала !important">${escapeHtml(state.prompt.weak)}</textarea>
-      </div>
-
-      <div class="field">
-        <label class="field-label" for="prompt-fix">Что бы ты поправил или оставил как есть? <span class="field-hint">(необязательно)</span></label>
-        <textarea class="field-input ${state.prompt.fix.trim() ? "filled" : ""}"
-          id="prompt-fix" data-prompt-key="fix"
-          placeholder="Свободное поле — можно оставить пустым">${escapeHtml(state.prompt.fix)}</textarea>
-      </div>
-    </section>
-  `;
+  return [
+    '<section class="section" aria-labelledby="practice-title">',
+    '  <div class="section-head">',
+    '    <div class="section-num practice">П</div>',
+    '    <div class="section-title-wrap">',
+    '      <h2 class="section-title" id="practice-title">Практика: оформление и проверка</h2>',
+    '      <p class="section-sub">Добавь CSS к своим страницам с прошлого урока, потом провери палитру через ИИ.</p>',
+    '    </div>',
+    '    <span class="section-status ' + (practiceDone ? 'done' : '') + '">' + tasksDone + '/3 ТЗ + ИИ</span>',
+    '  </div>',
+    '',
+    '  <div class="algo">',
+    '    <div class="algo-title">',
+    '      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>',
+    '      Как работать через блокнот',
+    '    </div>',
+    '    <ol>',
+    '      <li>Открой <b>Блокнот</b> (в меню «Пуск» набери «Блокнот»).</li>',
+    '      <li>Напиши или вставь код — HTML и CSS живут в одном файле, CSS идёт внутри &lt;style&gt; в &lt;head&gt;.</li>',
+    '      <li>Нажми <b>Файл → Сохранить как</b>. В поле «Тип файла» выбери <b>«Все файлы»</b>. В поле «Имя файла» напиши <b>index.html</b>. В поле «Кодировка» выбери <b>UTF-8</b>.</li>',
+    '      <li>Сохрани файл в свою личную папку.</li>',
+    '      <li>Открой файл двойным кликом — он откроется в браузере.</li>',
+    '      <li>Поправил код? Сохрани в блокноте → нажми <b>F5</b> в браузере.</li>',
+    '      <li>Если вместо букв непонятные символы — значит, сохранил не в UTF-8. Пересохрани.</li>',
+    '    </ol>',
+    '    <div class="algo-note">',
+    '      <b>Важно:</b> на этом занятии отдельного CSS-файла нет. Весь CSS живёт внутри &lt;style&gt; в том же &lt;index.html&gt;. Отдельные файлы и VS Code подключим позже.',
+    '    </div>',
+    '    <div class="algo-note">',
+    '      <b>Альтернатива 1:</b> если блокнот не получается или хочешь видеть результат сразу — найди в интернете <b>«Онлайн HTML-редактор»</b>. Там ты пишешь код слева, а справа видишь, как он выглядит на странице. Так быстрее проверять свои правки.',
+    '    </div>',
+    '    <div class="algo-note">',
+    '      <b>Альтернатива 2:</b> если у тебя установлен <b>VS Code</b> — это лучший вариант. Он подсвечивает теги и CSS разными цветами, показывает незакрытые теги и сам предлагает закрывающие скобки. Создай файл <code>index.html</code> через «Файл → Сохранить как», и VS Code сам поймёт, что это HTML.',
+    '    </div>',
+    '  </div>',
+    '',
+    '  <div class="algo">',
+    '    <div class="algo-title">',
+    '      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 2"/></svg>',
+    '      Кнопка переключения темы',
+    '    </div>',
+    '    <p style="margin:0 0 10px; color:#78350f; font-size:14px; line-height:1.5">',
+    '      Чтобы тёмная тема включалась по клику, нужна кнопка. Она меняет атрибут <code>data-theme</code> у тега <code>&lt;html&gt;</code> — и CSS сам подхватывает второй набор переменных.',
+    '    </p>',
+    '    ',
+    '    <p style="margin:12px 0 8px; color:#78350f; font-size:14px; font-weight:600">',
+    '      📍 Куда вставлять кнопку',
+    '    </p>',
+    '    <p style="margin:0 0 10px; color:#78350f; font-size:14px; line-height:1.5">',
+    '      Кнопку вставляй <b>внутри</b> <code>&lt;body&gt;</code>, сразу после открывающего тега <code>&lt;body&gt;</code> — чтобы она была первой на странице. Или перед закрывающим <code>&lt;/body&gt;</code> — разницы нет, главное внутри body.',
+    '    </p>',
+    '',
+    '    <div class="code-block" style="margin-bottom:12px">' + escapeHtml(toggleCodeBlock) + '</div>',
+    '',
+    '    <p style="margin:12px 0 8px; color:#78350f; font-size:14px; font-weight:600">',
+    '       Как оформить кнопку через CSS',
+    '    </p>',
+    '    <p style="margin:0 0 10px; color:#78350f; font-size:14px; line-height:1.5">',
+    '      Добавь в блок <code>&lt;style&gt;</code> правило для класса <code>.theme-toggle</code>. Кнопка должна быть видна в обеих темах — используй <code>var()</code> для фона, текста и рамки.',
+    '    </p>',
+    '',
+    '    <div class="code-block css-block" style="margin-bottom:0">' + escapeHtml(cssToggleBlock) + '</div>',
+    '',
+    '    <div class="algo-note">',
+    '      <b>Как это работает:</b> <code>document.documentElement</code> — это тег <code>&lt;html&gt;</code>. Если у него уже стоит <code>data-theme="dark"</code>, кнопка убирает атрибут. Если атрибута нет — ставит. CSS-селектор <code>html[data-theme="dark"]</code> срабатывает только когда атрибут есть.',
+    '    </div>',
+    '    <div class="algo-note">',
+    '      <b>Зачем <code>position: fixed</code>:</b> кнопка «прилипает» к правому верхнему углу и остаётся там при прокрутке. Можно использовать и <code>position: absolute</code> — тогда кнопка будет в потоке документа.',
+    '    </div>',
+    '  </div>',
+    '',
+    '  <h3 class="sub-title">Три задания</h3>',
+    '  <p class="section-sub" style="margin-bottom:12px">Каждое задание — продолжение твоей страницы с прошлого урока. Сначала вставь свой старый код, потом добавь блок <code>&lt;style&gt;</code> в <code>&lt;head&gt;</code>.</p>',
+    '  <div class="tasks-list">',
+    '    ' + TASKS.map(renderTaskCard).join(''),
+    '  </div>',
+    '',
+    '  <div class="divider"></div>',
+    '',
+    '  <h3 class="sub-title">Проверка через ИИ</h3>',
+    '  <p class="section-sub" style="margin-bottom:14px">Выбери, какой код отправить на проверку, или вставь свой. Скопируй промпт в одну из нейросетей и вставь ответ обратно. Префикс переменных модель подберёт по теме твоего проекта.</p>',
+    '',
+    '  <div class="ai-links">',
+    '    <a class="ai-link" href="https://chat.deepseek.com/" target="_blank" rel="noopener">',
+    '      <span class="ai-link-dot deepseek"></span>',
+    '      DeepSeek',
+    '    </a>',
+    '    <a class="ai-link" href="https://alice.yandex.ru/" target="_blank" rel="noopener">',
+    '      <span class="ai-link-dot alice"></span>',
+    '      Яндекс Алиса',
+    '    </a>',
+    '    <a class="ai-link" href="https://chat.qwen.ai/" target="_blank" rel="noopener">',
+    '      <span class="ai-link-dot qwen"></span>',
+    '      Qwen',
+    '    </a>',
+    '  </div>',
+    '',
+    '  <div class="field">',
+    '    <label class="field-label">Какой код отправить на проверку?</label>',
+    '    <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px">',
+    '      ' + taskRadios,
+    '      <label class="radio ' + customSel + '" style="flex:0 1 auto">',
+    '        <input type="radio" name="selectedTask" value="custom" ' + customChk + ' data-prompt-task/>',
+    '        Свой код',
+    '      </label>',
+    '    </div>',
+    '  </div>',
+    '',
+    selectedInfo,
+    '',
+    '  <div class="prompt-box" aria-label="Текст промпта">',
+    '    <button class="copy-btn" data-action="copy-prompt" type="button" aria-label="Скопировать промпт с кодом">Копировать</button>',
+    escapeHtml(buildPrompt()),
+    '  </div>',
+    '',
+    '  <div class="field">',
+    '    <label class="field-label" for="prompt-response">Ответ нейросети (вставь сюда)</label>',
+    '    <textarea class="field-input ' + (state.prompt.response.trim() ? 'filled' : '') + '"',
+    '      id="prompt-response" data-prompt-key="response"',
+    '      placeholder="Сюда — то, что прислала модель"',
+    '      style="min-height:180px">' + escapeHtml(state.prompt.response) + '</textarea>',
+    '  </div>',
+    '',
+    '  <div class="checklist" role="group" aria-label="Чек-лист проверки ответа">',
+    '    <div class="checklist-title">Чек-лист проверки ответа</div>',
+    '    ' + checkItems,
+    '  </div>',
+    '',
+    '  <div class="field">',
+    '    <label class="field-label" for="prompt-weak">Слабое место, которое ты нашёл в ответе модели</label>',
+    '    <textarea class="field-input ' + (state.prompt.weak.trim() ? 'filled' : '') + '"',
+    '      id="prompt-weak" data-prompt-key="weak"',
+    '      placeholder="Где модель предложила цвет без контраста, потеряла переменную или использовала !important">' + escapeHtml(state.prompt.weak) + '</textarea>',
+    '  </div>',
+    '',
+    '  <div class="field">',
+    '    <label class="field-label" for="prompt-fix">Что бы ты поправил или оставил как есть? <span class="field-hint">(необязательно)</span></label>',
+    '    <textarea class="field-input ' + (state.prompt.fix.trim() ? 'filled' : '') + '"',
+    '      id="prompt-fix" data-prompt-key="fix"',
+    '      placeholder="Свободное поле — можно оставить пустым">' + escapeHtml(state.prompt.fix) + '</textarea>',
+    '  </div>',
+    '</section>'
+  ].join('\n');
 }
 
 function renderTaskCard(t){
   const taskState = state.tasks[t.id];
   const done = taskState.code.trim() && taskState.note.trim();
-  return `
-    <div class="task-card ${done ? "done" : ""}" data-task="${t.id}">
-      <div class="task-card-head">
-        <span class="task-card-num">${TASKS.indexOf(t) + 1}</span>
-        <span class="task-card-title">${escapeHtml(t.title)}</span>
-      </div>
-      <div class="task-card-note">
-        <span>💡</span>
-        <span><b>Продолжение прошлого урока.</b> ${t.note}</span>
-      </div>
-      <p class="task-card-desc">${t.desc}</p>
-      <div class="field">
-        <label class="field-label" for="task-code-${t.id}">Твой код <span class="field-hint">(HTML + CSS в одном файле)</span></label>
-        <textarea class="field-input code ${taskState.code.trim() ? "filled" : ""}"
-          id="task-code-${t.id}" data-task-key="code" data-task-id="${t.id}"
-          placeholder="${escapeHtml(t.placeholder)}">${escapeHtml(taskState.code)}</textarea>
-      </div>
-      <div class="field">
-        <label class="field-label" for="task-note-${t.id}">Что получилось? Что было сложно? <span class="field-hint">(1–2 предложения)</span></label>
-        <textarea class="field-input ${taskState.note.trim() ? "filled" : ""}"
-          id="task-note-${t.id}" data-task-key="note" data-task-id="${t.id}"
-          placeholder="Например: «забыл var() и вписал цвет напрямую — тёмная тема не переключилась»">${escapeHtml(taskState.note)}</textarea>
-      </div>
-    </div>
-  `;
+  return [
+    '<div class="task-card ' + (done ? 'done' : '') + '" data-task="' + t.id + '">',
+    '  <div class="task-card-head">',
+    '    <span class="task-card-num">' + (TASKS.indexOf(t) + 1) + '</span>',
+    '    <span class="task-card-title">' + escapeHtml(t.title) + '</span>',
+    '  </div>',
+    '  <div class="task-card-note">',
+    '    <span>💡</span>',
+    '    <span><b>Продолжение прошлого урока.</b> ' + escapeHtml(t.note) + '</span>',
+    '  </div>',
+    '  <p class="task-card-desc">' + t.desc + '</p>',
+    '  <div class="field">',
+    '    <label class="field-label" for="task-code-' + t.id + '">Твой код <span class="field-hint">(HTML + CSS в одном файле)</span></label>',
+    '    <textarea class="field-input code ' + (taskState.code.trim() ? 'filled' : '') + '"',
+    '      id="task-code-' + t.id + '" data-task-key="code" data-task-id="' + t.id + '"',
+    '      placeholder="' + escapeHtml(t.placeholder) + '">' + escapeHtml(taskState.code) + '</textarea>',
+    '  </div>',
+    '  <div class="field">',
+    '    <label class="field-label" for="task-note-' + t.id + '">Что получилось? Что было сложно? <span class="field-hint">(1–2 предложения)</span></label>',
+    '    <textarea class="field-input ' + (taskState.note.trim() ? 'filled' : '') + '"',
+    '      id="task-note-' + t.id + '" data-task-key="note" data-task-id="' + t.id + '"',
+    '      placeholder="Например: «забыл var() и вписал цвет напрямую — тёмная тема не переключилась»">' + escapeHtml(taskState.note) + '</textarea>',
+    '  </div>',
+    '</div>'
+  ].join('\n');
 }
 
 function renderActions(progress){
   const canFinish = progress.percent >= 70;
-  return `
-    <div class="actions" role="toolbar" aria-label="Действия">
-      <div class="actions-inner">
-        <button class="btn btn-ghost" data-action="reset" type="button">Сбросить</button>
-        <button class="btn btn-secondary" data-action="print" type="button">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-          Сохранить PDF
-        </button>
-        <button class="btn btn-primary" data-action="finish" type="button" ${canFinish ? "" : "disabled style=\"opacity:.5;cursor:not-allowed\""}>
-          Завершить
-        </button>
-      </div>
-    </div>
-  `;
+  const disabledAttr = canFinish ? '' : 'disabled style="opacity:.5;cursor:not-allowed"';
+  return [
+    '<div class="actions" role="toolbar" aria-label="Действия">',
+    '  <div class="actions-inner">',
+    '    <button class="btn btn-ghost" data-action="reset" type="button">Сбросить</button>',
+    '    <button class="btn btn-secondary" data-action="print" type="button">',
+    '      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>',
+    '      Сохранить PDF',
+    '    </button>',
+    '    <button class="btn btn-primary" data-action="finish" type="button" ' + disabledAttr + '>',
+    '      Завершить',
+    '    </button>',
+    '  </div>',
+    '</div>'
+  ].join('\n');
 }
 
 function renderFinish(progress){
@@ -950,61 +988,61 @@ function renderFinish(progress){
   const tasksDone = tasksDoneCount();
   const checkCount = state.prompt.checklist.filter(Boolean).length;
 
-  return `
-    <section class="finish" aria-labelledby="fin-title">
-      <div class="finish-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 10 18 20 6"/></svg>
-      </div>
-      <h2 id="fin-title">Рабочий лист заполнен</h2>
-      <p>Сохрани PDF и передай учителю. Помни правило курса: сдаётся только то, что ты можешь объяснить вслух.</p>
-
-      <div class="stats">
-        <div class="stat">
-          <div class="stat-val">${learned}/${TERMS.length}</div>
-          <div class="stat-lbl">терминов отмечено</div>
-        </div>
-        <div class="stat">
-          <div class="stat-val">${tasksDone}/3</div>
-          <div class="stat-lbl">ТЗ выполнено</div>
-        </div>
-        <div class="stat">
-          <div class="stat-val">${checkCount}/${CHECKLIST.length}</div>
-          <div class="stat-lbl">пунктов чек-листа</div>
-        </div>
-      </div>
-
-      <div class="finish-actions">
-        <button class="btn btn-secondary" data-action="back" type="button">Вернуться и проверить</button>
-        <button class="btn btn-primary" data-action="print" type="button">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-          Сохранить PDF
-        </button>
-        <button class="btn btn-ghost" data-action="reset" type="button">Начать заново</button>
-      </div>
-    </section>
-  `;
+  return [
+    '<section class="finish" aria-labelledby="fin-title">',
+    '  <div class="finish-icon" aria-hidden="true">',
+    '    <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 10 18 20 6"/></svg>',
+    '  </div>',
+    '  <h2 id="fin-title">Рабочий лист заполнен</h2>',
+    '  <p>Сохрани PDF и передай учителю. Помни правило курса: сдаётся только то, что ты можешь объяснить вслух.</p>',
+    '',
+    '  <div class="stats">',
+    '    <div class="stat">',
+    '      <div class="stat-val">' + learned + '/' + TERMS.length + '</div>',
+    '      <div class="stat-lbl">терминов отмечено</div>',
+    '    </div>',
+    '    <div class="stat">',
+    '      <div class="stat-val">' + tasksDone + '/3</div>',
+    '      <div class="stat-lbl">ТЗ выполнено</div>',
+    '    </div>',
+    '    <div class="stat">',
+    '      <div class="stat-val">' + checkCount + '/' + CHECKLIST.length + '</div>',
+    '      <div class="stat-lbl">пунктов чек-листа</div>',
+    '    </div>',
+    '  </div>',
+    '',
+    '  <div class="finish-actions">',
+    '    <button class="btn btn-secondary" data-action="back" type="button">Вернуться и проверить</button>',
+    '    <button class="btn btn-primary" data-action="print" type="button">',
+    '      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>',
+    '      Сохранить PDF',
+    '    </button>',
+    '    <button class="btn btn-ghost" data-action="reset" type="button">Начать заново</button>',
+    '  </div>',
+    '</section>'
+  ].join('\n');
 }
 
 function bindHandlers(){
-  app.querySelectorAll("[data-action]").forEach(btn => {
+  app.querySelectorAll("[data-action]").forEach(function(btn){
     btn.addEventListener("click", handleAction);
   });
 
-  app.querySelectorAll("[data-term]").forEach(el => {
-    const handler = () => {
+  app.querySelectorAll("[data-term]").forEach(function(el){
+    const handler = function(){
       const key = el.dataset.term;
       state.termsLearned[key] = !state.termsLearned[key];
       saveState();
       render();
     };
     el.addEventListener("click", handler);
-    el.addEventListener("keydown", e => {
+    el.addEventListener("keydown", function(e){
       if(e.key === " " || e.key === "Enter"){ e.preventDefault(); handler(); }
     });
   });
 
-  app.querySelectorAll("[data-task-key]").forEach(input => {
-    input.addEventListener("input", e => {
+  app.querySelectorAll("[data-task-key]").forEach(function(input){
+    input.addEventListener("input", function(e){
       const id = e.target.dataset.taskId;
       const key = e.target.dataset.taskKey;
       state.tasks[id][key] = e.target.value;
@@ -1015,19 +1053,19 @@ function bindHandlers(){
     });
   });
 
-  app.querySelectorAll("[data-prompt-task]").forEach(radio => {
-    radio.addEventListener("change", e => {
+  app.querySelectorAll("[data-prompt-task]").forEach(function(radio){
+    radio.addEventListener("change", function(e){
       state.prompt.selectedTask = e.target.value;
       const group = e.target.closest(".field");
-      group.querySelectorAll(".radio").forEach(r => r.classList.remove("selected"));
+      group.querySelectorAll(".radio").forEach(function(r){ r.classList.remove("selected"); });
       e.target.closest(".radio").classList.add("selected");
       saveState();
       render();
     });
   });
 
-  app.querySelectorAll("[data-prompt-key]").forEach(input => {
-    input.addEventListener("input", e => {
+  app.querySelectorAll("[data-prompt-key]").forEach(function(input){
+    input.addEventListener("input", function(e){
       state.prompt[e.target.dataset.promptKey] = e.target.value;
       updateFieldVisual(e.target);
       updateProgress();
@@ -1035,8 +1073,8 @@ function bindHandlers(){
     });
   });
 
-  app.querySelectorAll("[data-check-idx]").forEach(item => {
-    const handler = () => {
+  app.querySelectorAll("[data-check-idx]").forEach(function(item){
+    const handler = function(){
       const idx = parseInt(item.dataset.checkIdx, 10);
       state.prompt.checklist[idx] = !state.prompt.checklist[idx];
       item.classList.toggle("checked", state.prompt.checklist[idx]);
@@ -1045,7 +1083,7 @@ function bindHandlers(){
       saveState();
     };
     item.addEventListener("click", handler);
-    item.addEventListener("keydown", e => {
+    item.addEventListener("keydown", function(e){
       if(e.key === " " || e.key === "Enter"){ e.preventDefault(); handler(); }
     });
   });
@@ -1079,7 +1117,7 @@ function handleAction(e){
   } else if(action === "finish"){
     const p = countProgress();
     if(p.percent < 70){
-      alert(`Заполни ещё немного — сейчас заполнено ${p.percent}%. Для завершения нужно 70%.`);
+      alert('Заполни ещё немного — сейчас заполнено ' + p.percent + '%. Для завершения нужно 70%.');
       return;
     }
     state.finished = true;
@@ -1103,7 +1141,7 @@ function buildPrompt(){
     context = "страница, которую я написал";
   } else {
     code = state.tasks[state.prompt.selectedTask].code || "(код этого ТЗ пока не написан)";
-    const task = TASKS.find(t => t.id === state.prompt.selectedTask);
+    const task = TASKS.find(function(t){ return t.id === state.prompt.selectedTask; });
     context = task ? task.context : "страница";
   }
   return PROMPT_TEMPLATE
@@ -1115,7 +1153,7 @@ function updateFieldVisual(el){
   el.classList.toggle("filled", !!el.value.trim());
 }
 function updateTaskCardVisual(id){
-  const card = document.querySelector(`[data-task="${id}"]`);
+  const card = document.querySelector('[data-task="' + id + '"]');
   if(!card) return;
   const done = state.tasks[id].code.trim() && state.tasks[id].note.trim();
   card.classList.toggle("done", done);
@@ -1159,7 +1197,7 @@ async function copyToClipboard(text, btn){
   const original = btn.textContent;
   btn.textContent = "✓ Скопировано";
   btn.classList.add("copied");
-  setTimeout(() => {
+  setTimeout(function(){
     btn.textContent = original;
     btn.classList.remove("copied");
   }, 1600);
